@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Responsividade -->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- Owl css -->
+        <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+        <title>Netflix Clone</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container">
+                <h2 class="logo">NETFLIX</h2>
+                <nav>
+                    <a href="#">Início</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Documentários</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="filme-principal">
+                <div class="container">
+                    <h3 class="titulo">BREAKING BAD</h3>
+                    <p class="descricao">Ao saber que tem câncer, um professor passa a fabricar metanfetamina
+                        pelo futuro da família, mudando o destino de todos.
+                        Assista agora a nova temporada de Breaking Bad que está imperdível.</p>
+                    <div class="botoes">
+                        <button role="button" class="botao" onclick="abrirVideo()">
+                            <i class="fas fa-play"></i>
+                            ASSISTIR AGORA
+                        </button>
+                        <button role="button" class="botao" onclick="abrirModal()">
+                            <i class="fas fa-info-circle"></i>
+                            MAIS INFORMAÇÕES
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="carrossel-filmes">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img class="box-filme" src="img/mini1.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini2.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini3.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini4.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini5.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini6.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini7.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini8.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini9.jpg" alt=""></div>
+                <div class="item"><img class="box-filme" src="img/mini10.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="bg-modal" id="bg-modal">
+            <div class="modal" id="modal">
+                <button class="btn-modal-close" onclick="fecharModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-header">
+                    <button class="btn-modal-play" onclick="abrirVideo()">
+                        <i class="far fa-play-circle"></i>
+                    </button>
+                    <img src="img/capa-modal.jpg" alt="Breaking Bad">
+                </div>
+                <div class="modal-content">
+                    <p>Ao saber que tem câncer, um professor passa a fabricar metanfetamina pelo futuro da família, mudando
+                        o destino de todos.</p>
+                    <div class="group">
+                        <p><span>Estrelando: </span>Bryan Cranston, Anna Gunn, Aaron Paul
+                        </p>
+                        <p><span>Criação: </span>Vince Gilligan</p>
+                        <p><span>Gênero: </span>Drama <strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+        <script src="js/owl/jquery.min.js"></script>
+        <script src="js/owl/owl.carousel.min.js"></script>
+        <script src="js/owl/setup.js"></script>
+        <script src="js/script.js"></script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,222 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Elementos base*/
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/* Filme principal*/
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%) , url('../img/capa-breaking.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.carrossel-filmes {
+    margin-top: 5px;
+}
+
+/* Página video.html*/
+.container-video {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;    
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+}
+
+.link {    
+    display: inline-table;
+    text-decoration: none;
+    color: #aaa;;
+    margin: 10px 0 15px 10px; 
+    font-size: 16px;       
+}
+
+.link:hover {
+    color: #fff;
+}
+
+/* Estilos da modal*/
+.bg-modal {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.70);
+    position: fixed;
+    z-index: 2; 
+    top: 0;   
+    display: none;       
+}
+
+.modal {   
+    width: 60%;
+    height: auto;
+    background-color: rgba(38, 38, 38,.95);
+    margin: 60px auto 0 auto;
+    top: -100%;
+    animation: down .3s;          
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    padding: 20px;
+    font-size: 14px;    
+    text-align: justify;
+    color: #fff;
+}
+
+.modal-content .group {
+    margin-top: 15px;
+}
+
+.modal-content span {
+    color: #aaa;   
+}
+
+.btn-modal-close {    
+    background: none;
+    color: #aaa;
+    border: none;
+    float: right;
+    cursor: pointer;
+    margin: -25px 0 0 0;
+    padding: 4px;
+    top: -10px;
+}
+
+.btn-modal-close:hover {
+    color: #fff;
+}
+
+.btn-modal-play {
+    position: absolute;
+    background: none;
+    color: #fff;
+    border: none;    
+    cursor: pointer;    
+}
+
+.btn-modal-play i {
+    font-size: 60px;
+    opacity: .8;
+}
+
+.btn-modal-play i:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.modal img {
+    width: 100%;   
+}
+
+/* Animação da modal*/
+@keyframes down {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
